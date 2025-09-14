@@ -7,28 +7,28 @@
       "projectType": "application",
       "schematics": {},
       "root": "",
-      "sourceRoot": "src",
+      "sourceRoot": ".",
       "prefix": "app",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
             "outputPath": "dist/frontend",
-            "index": "src/index.html",
-            "browser": "src/main.ts",
+            "index": "index.html",
+            "browser": "main.ts",
             "polyfills": [
               "zone.js"
             ],
             "tsConfig": "tsconfig.app.json",
             "assets": [
-              "src/favicon.ico",
-              "src/assets"
+              "favicon.ico",
+              "assets"
             ],
             "styles": [
-              "src/styles.css"
+              "styles.css"
             ],
             "scripts": [],
-            "server": "src/main.server.ts",
+            "server": "main.server.ts",
             "prerender": true,
             "ssr": {
               "entry": "server.ts"
@@ -85,16 +85,19 @@
             ],
             "tsConfig": "tsconfig.spec.json",
             "assets": [
-              "src/favicon.ico",
-              "src/assets"
+              "favicon.ico",
+              "assets"
             ],
             "styles": [
-              "src/styles.css"
+              "styles.css"
             ],
             "scripts": []
           }
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "ce483d48-0aac-4f1f-b286-3afba432421c"
   }
 }

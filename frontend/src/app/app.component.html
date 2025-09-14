@@ -1,0 +1,36 @@
+<div style="max-width: 400px; margin: 2rem auto;">
+  <h2>User Login Form</h2>
+  <form (ngSubmit)="saveUser()" #userForm="ngForm">
+    <div>
+      <label>Name:</label>
+      <input type="text" name="name" [(ngModel)]="user.name" required />
+    </div>
+    <div>
+      <label>Age:</label>
+      <input type="number" name="age" [(ngModel)]="user.age" required />
+    </div>
+    <div>
+      <label>Gender:</label>
+      <select name="gender" [(ngModel)]="user.gender" required>
+        <option value="">Select</option>
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+        <option value="Other">Other</option>
+      </select>
+    </div>
+    <div>
+      <label>Profession:</label>
+      <input type="text" name="profession" [(ngModel)]="user.profession" required />
+    </div>
+    <button type="submit" [disabled]="!userForm.form.valid">Save</button>
+  </form>
+
+  <div style="margin-top: 2rem;">
+    <button (click)="getAllNames()">Show All Names</button>
+    <ul *ngIf="names.length">
+      <li *ngFor="let name of names">{{ name }}</li>
+    </ul>
+  </div>
+</div>
+
+
